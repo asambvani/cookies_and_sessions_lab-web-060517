@@ -1,0 +1,12 @@
+<h3> This is what's currently in the cart: </h3>
+<% @cart.each do |product| %>
+  <ul>
+    <li><%= product %> </li>
+  </ul>
+<% end %>
+<p>Fill out the form below to add to cart: </p>
+<form  action='/products' method="post">
+  <label for="product">Enter Product:</label>
+  <input type="text" name="product" value="">
+  <input type="submit" name="add to cart" id="add to cart" value="Add to cart">
+</form>
